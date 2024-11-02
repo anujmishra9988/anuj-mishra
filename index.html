@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Degrees Presents - Anuj Mishra</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Outfit:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+        
+.hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+.hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b, #4ecdc4);
+            animation: gradient 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+.hero-content {
+            max-width: 1000px;
+            position: relative;
+        }
+
+        .brand-container {
+            margin-bottom: 40px;
+            position: relative;
+            padding: 20px;
+        }
+        
+.brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+            background-size: 200% 200%;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+.presents-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            color: #ffd700;
+            font-weight: 400;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+.divider {
+            width: 150px;
+            height: 3px;
+            background: #ffd700;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffd700;
+            border-radius: 50%;
+            top: -3.5px;
+        }
+        
+.divider::before { left: 0; }
+        .divider::after { right: 0; }
+
+        .name-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .student-info {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #fff;
+        }
+        
+.education-status {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #4ecdc4;
+            font-weight: 600;
+        }
+
+        .social-links {
+            margin-top: 40px;
+        }
+        
+
+        ..social-links {
+            margin-top: 40px;
+        }
+        
+.social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            line-height: 26px;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            color: #ffd700;
+            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        }
+        
+        .main-content {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #ffd700;
+        }
+
+        .academic-progress {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .progress-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .semester-gpa {
+            font-size: 2rem;
+            color: #2c3e50;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .tech-stack {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-badge {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+@media (max-width: 768px) {
+            .brand-title {
+                font-size: 2.5rem;
+            }
+            .presents-text {
+                font-size: 1.2rem;
+                letter-spacing: 6px;
+            }
+            .name-title {
+                font-size: 2.8rem;
+            }
+            .student-info {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="brand-container">
+                <h1 class="brand-title">Zero Degrees</h1>
+                <div class="presents-text">Presents</div>
+                <div class="divider"></div>
+            </div>
+            <h2 class="name-title">Anuj Mishra</h2>
+            <p class="student-info">Aspiring Software Developer</p>
+            <p class="education-status">Bachelor of Computer Applications (BCA) Student</p>
+            <div class="social-links">
+                <a href="https://github.com/anujmishra9988" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anuj-mishra-78762a272" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="Mailto:am323065@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/anuj_mishra246?" target="_blank" ><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+  
+ 
+    <main class="main-content">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Anuj Mishra a passionate BCA student with a keen interest in software development and web technologies. Currently pursuing my degree, I'm focused on building a strong foundation in computer science while working on practical projects to enhance my skills.</p>
+        </section>
+
+        <section class="section">
+            <h2>Academic Progress</h2>
+            <div class="academic-progress">
+                <div class="progress-card">
+                    <h3>Current Year</h3>
+                    <div class="year-cgpa">1st</div>
+                    <p>Bachelor of Computer Applications</p>
+                </div>
+                <div class="progress-card">
+                    <h3>CGPA</h3>
+                    <div class="year-cgpa">-</div>
+                    <p>Cumulative Grade Point Average</p>
+                </div>
+                <div class="progress-card">
+                    <h3>Expected Graduation</h3>
+                    <div class="semester-gpa">2027</div>
+                    <p>Bachelor's Degree</p>
+                </div>
+            </div>
+        </section>
+
+     
+        <section class="section">
+            <h2>Certifications & Achievements</h2>
+            <ul style="list-style-type: none;">
+                <li style="margin-bottom: 15px;">🏆 Python Programming - Coursera</li>
+                <li style="margin-bottom: 15px;">🏆 Web Development Fundamentals - freeCodeCamp</li>
+                <li style="margin-bottom: 15px;">🏆 Database Management - Microsoft Learn</li>
+                <li style="margin-bottom: 15px;">and Many More</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
